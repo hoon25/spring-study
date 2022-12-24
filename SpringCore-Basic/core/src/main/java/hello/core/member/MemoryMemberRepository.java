@@ -9,7 +9,7 @@ import java.util.Map;
 public class MemoryMemberRepository implements MemberRepository {
 
     // ConcurrentHashmap을 쓰면 동시성 이슈 해결 가능
-    private static Map<Long, Member> store = new HashMap<>();
+    private static final Map<Long, Member> store = new HashMap<>();
 
     @Override
     public void save(Member member) {
